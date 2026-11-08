@@ -71,6 +71,7 @@ app.get('/', (c) => {
           <footer class="flex flex-wrap justify-between gap-3 border-t border-white/10 py-6 text-sm text-[#9aa6b5]">
             <p>Rennan Raposo</p>
             <p>Aprendendo e construindo, um passo de cada vez.</p>
+            <a href="https://github.com/rennanraposo/my-site" class="hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a9c9eb]">Código-fonte ↗</a>
           </footer>
         </div>
       </body>
