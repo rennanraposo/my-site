@@ -67,6 +67,8 @@ O Worker `my-site` está conectado a este repositório pelo Workers Builds:
 
 Um novo commit na `main`, inclusive um merge de pull request, aciona a publicação. Confira os registros da compilação e o site antes de considerar a tarefa concluída. Uma falha na publicação não significa que o commit falhou.
 
+Se nenhum build aparecer após um merge, confira no GitHub: Settings → Applications → Installed GitHub Apps → Cloudflare Workers and Pages → Configure. O repositório `my-site` precisa estar autorizado em "Only select repositories"; conseguir ler um repositório público não significa que a integração recebe seus eventos. Preserve as autorizações dos demais projetos. Após corrigir o acesso, envie uma nova alteração por pull request para testar o disparo.
+
 `npm.cmd run deploy` publica diretamente na Cloudflare quando há autenticação e permissões; prefira o fluxo por pull request. Não é necessário entrar na Cloudflare no computador da faculdade para publicar pelo fluxo GitHub → Workers Builds.
 
 Ao voltar ao outro computador, confira `git status`, mude para `main` sem alterações pendentes e execute `git pull --ff-only origin main`. Se houver divergências, investigue em vez de usar comandos que descartam trabalho. Envie os commits antes de sair: alterações não enviadas não estarão no outro computador.
